@@ -3,86 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insel aus Feuer & Eis | Olalei Event-Archiv</title>
-    <meta name="description" content="Entdecken Sie das Archiv zur legendären Island-Multivision von Olalei. Ein Rückblick auf die Reportage über die Insel aus Feuer und Eis, Tourneedaten und Hintergründe.">
+    <title>Island – Insel aus Feuer und Eis | Olalei Archiv</title>
+    <meta name="description" content="Digitales Archiv der Multivision Island – Insel aus Feuer und Eis. Ein Rückblick auf spektakuläre Landschaften, Vulkane und die Geschichte dieser Olalei-Reportage.">
     
     <meta name="geo.region" content="CH-BE" />
     <meta name="geo.placename" content="Biel" />
     <link rel="canonical" href="https://olalei.ch/island-insel-aus-feuer-und-eis/" />
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Olalei / CSL Computer Service GmbH",
-      "url": "https://olalei.ch/island-insel-aus-feuer-und-eis/"
-    }
-    </script>
-
     <style>
-        :root { --primary: #e67e22; --secondary: #2c3e50; --text: #333; --light: #f9f9f9; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--light); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        header { background: #fff; border-bottom: 4px solid var(--primary); padding: 20px 0; }
-        .logo { font-size: 32px; font-weight: bold; letter-spacing: -1px; text-transform: uppercase; }
+        :root { --primary: #e67e22; --secondary: #2c3e50; --text: #333; --light: #f9f9f9; --white: #ffffff; }
+        
+        /* Mobile First & Performance */
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--light); -webkit-font-smoothing: antialiased; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+        
+        header { background: var(--white); border-bottom: 4px solid var(--primary); padding: 15px 0; }
+        .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: -1px; text-transform: uppercase; color: var(--secondary); }
         .logo span { color: var(--primary); }
-        nav { margin-top: 15px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 15px; }
-        nav a { text-decoration: none; color: var(--secondary); font-weight: 600; }
-        .hero { background: white; padding: 60px 0; border-bottom: 1px solid #eee; text-align: center; }
-        .hero h1 { font-size: 36px; margin-bottom: 10px; color: var(--secondary); }
-        .section-title { border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 30px; padding-bottom: 5px; }
-        .archive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-        .card h3 { margin-top: 0; color: var(--primary); }
-        .card p { font-size: 15px; color: #666; flex-grow: 1; }
-        .card a { text-decoration: none; color: var(--secondary); font-weight: bold; border-bottom: 1px solid var(--primary); align-self: flex-start; }
-        .partners { background: var(--secondary); color: white; padding: 40px 0; text-align: center; }
+        
+        nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 12px; }
+        nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; }
+        nav a:hover { color: var(--primary); }
+
+        .hero { background: var(--white); padding: 40px 0; border-bottom: 1px solid #eee; text-align: center; }
+        .hero h1 { font-size: 2rem; margin: 0 0 15px 0; color: var(--secondary); line-height: 1.2; }
+        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: #555; font-style: italic; }
+
+        .content-body { padding: 50px 0; background: var(--white); }
+        .section-title { border-bottom: 3px solid var(--primary); display: inline-block; margin-bottom: 25px; padding-bottom: 5px; font-size: 1.5rem; color: var(--secondary); }
+        
+        .archive-section { padding: 50px 0; }
+        .archive-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        
+        .card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+        .card h3 { margin: 0 0 10px 0; color: var(--primary); }
+        .card a { text-decoration: none; color: var(--secondary); font-weight: bold; border-bottom: 2px solid var(--primary); align-self: flex-start; margin-top: auto; }
+
+        .partners { background: var(--secondary); color: var(--white); padding: 40px 0; text-align: center; }
         .partners a { color: var(--primary); text-decoration: none; font-weight: bold; }
-        footer { padding: 40px 0; text-align: center; font-size: 14px; color: #888; }
+
+        footer { padding: 30px 0; text-align: center; font-size: 0.9rem; color: #666; }
+
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .archive-grid { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
 
-<header>
+<header role="banner">
     <div class="container">
         <div class="logo">OLA<span>LEI</span></div>
-        <nav>
+        <nav role="navigation">
             <a href="/">← Zurück zur Übersicht</a>
-            <a href="#archiv">Weitere Berichte</a>
             <a href="https://kidimove.ch" target="_blank" rel="noopener">Kidimove Portal</a>
         </nav>
     </div>
 </header>
 
-<main class="container">
+<main id="main-content">
     <section class="hero">
-        <h1>Insel aus Feuer & Eis</h1>
-        <p>Ein Rückblick auf die aussergewöhnliche Island-Multivision. Erfahren Sie mehr über die Produktion, die Hintergründe der Reportage und die vergangenen Tourneedaten dieser packenden Show.</p>
+        <div class="container">
+            <h1>Island – Insel aus Feuer und Eis</h1>
+            <p>Ein Rückblick auf die aussergewöhnliche Multivision-Reportage im Olalei Event-Archiv.</p>
+        </div>
     </section>
 
-    <section id="archiv" style="padding: 50px 0;">
-        <h2 class="section-title">Weitere Archiv-Reportagen entdecken</h2>
-        <div class="archive-grid">
-            <div class="card">
-                <h3>Sehnsucht Afrika</h3>
-                <p>Von den Anfängen bis zum Abenteuer. Ein Rückblick auf unsere Multimedia-Reisen durch den afrikanischen Kontinent.</p>
-                <a href="/sehnsucht-afrika/">Zum Afrika-Archiv</a>
-            </div>
-            <div class="card">
-                <h3>Living Africa</h3>
-                <p>Vom Anfänger zum Abenteurer: ein weiterer Rückblick auf die Afrika-Reportagen und Multimedia-Projekte von Olalei.</p>
-                <a href="/living-africa/">Zum Living-Africa-Archiv</a>
-            </div>
-            <div class="card">
-                <h3>Baumriesen Fotografie</h3>
-                <p>Die beeindruckende Dokumentation monumentaler Bäume und Naturdenkmäler der Schweiz.</p>
-                <a href="/baumriesen/">Zum Foto-Archiv</a>
-            </div>
-            <div class="card">
-                <h3>Am Ende der Strasse</h3>
-                <p>Die Weltreise-Dokumentation. Ein tiefer Einblick in das Leben unterwegs und globale Event-Kultur.</p>
-                <a href="/am-ende-der-strasse/">Zum Archiv «Am Ende der Strasse»</a>
+    <article class="content-body">
+        <div class="container">
+            <h2 class="section-title">Archiv zur Island-Multivision</h2>
+            <p>
+                Die Multivision «Island – Insel aus Feuer und Eis» zählt zu den prägenden Reportage- und Eventprojekten im Olalei-Archiv. Im Fokus standen die spektakulären Landschaften Islands, geprägt von Vulkanen, Gletschern, Wasserfällen und rauer Natur.
+            </p>
+            <p>
+                Die Produktion wurde im Rahmen von Live-Events und Multivision-Vorträgen präsentiert und verband eindrucksvolle Fotografie mit erzählerischer Tiefe. Besucher erhielten Einblicke in die Naturgewalten und die kulturellen Besonderheiten der Insel.
+            </p>
+            <p>
+                Diese Seite dient als digitales Archiv dieser Reportage und bewahrt die Inhalte, Themen und Eindrücke für Interessierte und ehemalige Besucher. Gleichzeitig bildet sie die Grundlage für die thematische Einordnung innerhalb des Olalei Event- und Kulturarchivs.
+            </p>
+        </div>
+    </article>
+
+    <section class="archive-section">
+        <div class="container">
+            <h2 class="section-title">Weitere Archiv-Themen</h2>
+            <div class="archive-grid">
+                <div class="card">
+                    <h3>Baumriesen Fotografie</h3>
+                    <p>Dokumentation monumentaler Bäume und Naturdenkmäler der Schweiz.</p>
+                    <a href="/baumriesen/">Zum Foto-Archiv</a>
+                </div>
+                <div class="card">
+                    <h3>Am Ende der Strasse</h3>
+                    <p>Die Weltreise-Dokumentation. Ein tiefer Einblick in das Leben unterwegs.</p>
+                    <a href="/am-ende-der-strasse/">Zum Weltreise-Archiv</a>
+                </div>
+                <div class="card">
+                    <h3>Living Africa</h3>
+                    <p>Ein Rückblick auf die Afrika-Reportagen und Multimedia-Projekte.</p>
+                    <a href="/living-africa/">Zum Africa-Archiv</a>
+                </div>
+                <div class="card">
+                    <h3>Sehnsucht Afrika</h3>
+                    <p>Von den Anfängen bis zum Abenteuer auf dem afrikanischen Kontinent.</p>
+                    <a href="/sehnsucht-afrika/">Zum Archiv</a>
+                </div>
             </div>
         </div>
     </section>
@@ -91,14 +117,13 @@
 <section class="partners">
     <div class="container">
         <h2>Aktuelle Projekte & Partner</h2>
-        <p>Heute nutzen wir unsere Event-Expertise für moderne digitale Erlebnisse.</p>
         <p>Entdecken Sie Freizeit-Hotspots in 3D auf <a href="https://kidimove.ch" target="_blank" rel="noopener">Kidimove.ch</a> oder moderne Fotobox- und Eventmodule von <a href="https://funnyphotobox.ch" target="_blank" rel="noopener">FunnyPhotobox</a>.</p>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Olalei.ch | Ein Projekt der CSL Computer Service GmbH | <a href="/impressum.html" style="color:#888">Impressum</a></p>
+        <p>&copy; 2026 Olalei.ch | Ein Projekt der CSL Computer Service GmbH | <a href="/impressum.html" style="color:#666">Impressum</a></p>
     </div>
 </footer>
 
