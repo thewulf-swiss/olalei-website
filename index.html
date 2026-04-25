@@ -5,42 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olalei | Schweizer Event-Archiv & Freizeit-Guide</title>
     <meta name="description" content="Olalei - Das Schweizer Archiv für Events, Kultur und Multimedia-Reportagen. Entdecken Sie unsere Archiv-Projekte und den neuen Freizeit-Guide Kidimove.">
-    <meta name="geo.region" content="CH" />
+    
+    <meta name="geo.region" content="CH-BE" />
     <meta name="geo.placename" content="Biel" />
+    <link rel="canonical" href="https://olalei.ch/" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Olalei / CSL Computer Service GmbH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rennweg 62",
+        "addressLocality": "Biel",
+        "postalCode": "2504",
+        "addressCountry": "CH"
+      },
+      "url": "https://olalei.ch"
+    }
+    </script>
+
     <style>
         :root { --primary: #e67e22; --secondary: #2c3e50; --text: #333; --light: #f9f9f9; }
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--light); }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Header & Nav */
         header { background: #fff; border-bottom: 4px solid var(--primary); padding: 20px 0; }
         .logo { font-size: 32px; font-weight: bold; letter-spacing: -1px; text-transform: uppercase; }
         .logo span { color: var(--primary); }
         nav { margin-top: 15px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 15px; }
         nav a { text-decoration: none; color: var(--secondary); font-weight: 600; }
-
-        /* Hero */
         .hero { background: white; padding: 60px 0; border-bottom: 1px solid #eee; text-align: center; }
         .hero h1 { font-size: 36px; margin-bottom: 10px; color: var(--secondary); }
-        
-        /* Archiv-Raster */
         .section-title { border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 30px; padding-bottom: 5px; }
         .archive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
         .card h3 { margin-top: 0; color: var(--primary); }
-        .card p { font-size: 15px; color: #666; }
-        .card a { text-decoration: none; color: var(--secondary); font-weight: bold; border-bottom: 1px solid var(--primary); }
-
-        /* Kategorien-Cloud */
+        .card p { font-size: 15px; color: #666; flex-grow: 1; }
+        .card a { text-decoration: none; color: var(--secondary); font-weight: bold; border-bottom: 1px solid var(--primary); align-self: flex-start; }
         .cat-cloud { background: #fff; padding: 30px; border-radius: 8px; margin: 40px 0; }
         .cat-list { display: flex; flex-wrap: wrap; gap: 10px; }
         .cat-tag { background: #eee; padding: 5px 12px; border-radius: 4px; font-size: 13px; color: #555; }
-
-        /* Partners & Links */
         .partners { background: var(--secondary); color: white; padding: 40px 0; text-align: center; }
         .partners a { color: var(--primary); text-decoration: none; font-weight: bold; }
-
         footer { padding: 40px 0; text-align: center; font-size: 14px; color: #888; }
     </style>
 </head>
@@ -53,7 +61,7 @@
             <a href="/">Start</a>
             <a href="#archiv">Projekt-Archiv</a>
             <a href="#kategorien">Event-Kategorien</a>
-            <a href="https://kidimove.ch">Kidimove Portal</a>
+            <a href="https://kidimove.ch" target="_blank" rel="noopener">Kidimove Portal</a>
         </nav>
     </div>
 </header>
@@ -61,7 +69,7 @@
 <main class="container">
     <section class="hero">
         <h1>Willkommen im Olalei Event-Archiv</h1>
-        <p>Seit über 15 Jahren Ihr Begleiter für außergewöhnliche Schweizer Events, Multimedia-Reportagen und Lifestyle.</p>
+        <p>Seit über 15 Jahren Ihr Begleiter für aussergewöhnliche Schweizer Events, Multimedia-Reportagen und Lifestyle.</p>
     </section>
 
     <section id="archiv" style="padding: 50px 0;">
@@ -78,6 +86,11 @@
                 <a href="/sehnsucht-afrika/">Zum Afrika-Archiv</a>
             </div>
             <div class="card">
+                <h3>Living Africa</h3>
+                <p>Vom Anfänger zum Abenteurer: ein weiterer Rückblick auf die Afrika-Reportagen und Multimedia-Projekte von Olalei.</p>
+                <a href="/living-africa/">Zum Living-Africa-Archiv</a>
+            </div>
+            <div class="card">
                 <h3>Baumriesen Fotografie</h3>
                 <p>Die beeindruckende Dokumentation monumentaler Bäume und Naturdenkmäler der Schweiz.</p>
                 <a href="/baumriesen/">Zum Foto-Archiv</a>
@@ -85,7 +98,7 @@
             <div class="card">
                 <h3>Am Ende der Strasse</h3>
                 <p>Die Weltreise-Dokumentation. Ein tiefer Einblick in das Leben unterwegs und globale Event-Kultur.</p>
-                <a href="/weltreise/">Zum Weltreise-Archiv</a>
+                <a href="/am-ende-der-strasse/">Zum Archiv «Am Ende der Strasse»</a>
             </div>
         </div>
     </section>
@@ -106,7 +119,7 @@
     <div class="container">
         <h2>Aktuelle Projekte & Partner</h2>
         <p>Heute nutzen wir unsere Event-Expertise für moderne digitale Erlebnisse.</p>
-        <p>Entdecken Sie Freizeit-Hotspots in 3D auf <a href="https://kidimove.ch">Kidimove.ch</a> oder <br> buchen Sie erstklassiges Entertainment mit der <a href="https://funnyphotobox.ch">FunnyPhotobox in Zürich, Basel und Bern</a>.</p>
+        <p>Entdecken Sie Freizeit-Hotspots in 3D auf <a href="https://kidimove.ch" target="_blank" rel="noopener">Kidimove.ch</a> oder moderne Fotobox- und Eventmodule von <a href="https://funnyphotobox.ch" target="_blank" rel="noopener">FunnyPhotobox</a>.</p>
     </div>
 </section>
 
